@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  color: $black;
+  background-color: $white;
+  line-height: $line-height-base;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+.mainDashboard {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+  min-height: 100hv;
+}

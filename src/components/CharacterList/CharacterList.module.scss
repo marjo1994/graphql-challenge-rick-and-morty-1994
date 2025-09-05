@@ -1,0 +1,17 @@
+@use "../../styles/index.scss" as *;
+
+.characterList {
+  .characterItem {
+    border-bottom: 1px solid $gray;
+    padding: 1rem 0.85rem;
+    h2 {
+      font-size: 1.25rem;
+      color: $black;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: $gray;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import App from "./App.tsx";
 import {
   ApolloClient,
@@ -7,6 +6,7 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
+import "../src/styles/_globals.scss";
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: "https://rickandmortyapi.com/graphql" }),
