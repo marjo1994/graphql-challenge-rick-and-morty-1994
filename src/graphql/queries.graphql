@@ -18,6 +18,7 @@ query Character($id: ID!) {
     name
     species
     status
+    gender
     origin {
       name
     }

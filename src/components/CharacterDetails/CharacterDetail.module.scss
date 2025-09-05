@@ -1,0 +1,33 @@
+@use "../../styles/index.scss" as *;
+
+.characterDetails {
+  grid-column: 2;
+  height: 100%;
+  overflow-y: auto;
+  margin: 2rem 6.25rem;
+  .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .secondSubtitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid $gray;
+    .label {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $gray;
+    }
+    .info {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $black;
+    }
+  }
+}

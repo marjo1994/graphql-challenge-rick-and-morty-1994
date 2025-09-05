@@ -1,9 +1,19 @@
 @use "../../styles/index.scss" as *;
 
 .characterList {
+  grid-column: 1;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   .characterItem {
+    display: flex;
+    flex-direction: row;
     border-bottom: 1px solid $gray;
+    border-right: 1px solid $gray;
     padding: 1rem 0.85rem;
+    margin-left: 0.85rem;
+
+    cursor: pointer;
     h2 {
       font-size: 1.25rem;
       color: $black;
@@ -12,6 +22,12 @@
     p {
       font-size: 0.85rem;
       color: $gray;
+    }
+    .arrowIcon {
+      display: inline-block;
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 }

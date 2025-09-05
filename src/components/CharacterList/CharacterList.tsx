@@ -1,8 +1,14 @@
 import { useCharactersQuery } from "../../__generated__/types";
 import { useRef, useCallback } from "react";
 import styles from "./CharacterList.module.scss";
+import arrowIcon from "../../assets/arrow-icon.svg";
+import wheel from "../../assets/wheel-icon.svg";
 
-export const CharacterList = () => {
+type Props = {
+  onSelect: (id: string) => void;
+};
+
+export const CharacterList = ({ onSelect }: Props) => {
   const { data, loading, error, fetchMore } = useCharactersQuery({
     variables: { page: 1 },
     notifyOnNetworkStatusChange: true,
@@ -47,7 +53,6 @@ export const CharacterList = () => {
     <div className={styles.characterList}>
       {data?.characters?.results?.map((char, index) => {
         if (!char) return null;
-
         const results = data.characters?.results;
         if (!results) return null;
 
@@ -58,13 +63,24 @@ export const CharacterList = () => {
             key={char.id}
             ref={isLastItem ? lastCharacterRef : undefined}
             className={styles.characterItem}
+            onClick={() => onSelect(char.id || "")}
           >
-            <h2>{char.name}</h2>
-            <p>{char.species}</p>
+            <div>
+              <h2>{char.name}</h2>
+              <p>{char.species}</p>
+            </div>
+            <div className={styles.arrowIcon}>
+              <img src={arrowIcon} alt="arrow Icon" />
+            </div>
           </div>
         );
       })}
-      {loading && <p className="loading">Loading...</p>}
+      {loading && (
+        <div className="loading">
+          <img src={wheel} alt="wheel icon" />
+          Loading...
+        </div>
+      )}
     </div>
   );
 };
