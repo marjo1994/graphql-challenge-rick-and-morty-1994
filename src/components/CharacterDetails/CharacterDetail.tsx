@@ -72,7 +72,7 @@ export const CharacterDetails = ({ characterId }: Props) => {
         </div>
       )}
 
-      <h2 className={styles.secondSubtitle}>Episodies</h2>
+      <h2 className={styles.secondSubtitle}>Episodes</h2>
       {episodes.length > 0 ? (
         episodes.map((episode) => (
           <div key={episode?.id} className={styles.detail}>

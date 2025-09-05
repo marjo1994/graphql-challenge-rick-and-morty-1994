@@ -48,7 +48,6 @@ export const CharacterList = ({ onSelect }: Props) => {
 
   if (error) return <p className="error">Failed to Load Data</p>;
 
-  //console.log("data", data);
   return (
     <div className={styles.characterList}>
       {data?.characters?.results?.map((char, index) => {
