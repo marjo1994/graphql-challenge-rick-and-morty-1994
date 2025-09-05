@@ -17,6 +17,9 @@
     h2 {
       font-size: 1.25rem;
       color: $black;
+      @media (max-width: 1339px) {
+        font-size: 0.85rem;
+      }
     }
 
     p {

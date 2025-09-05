@@ -4,15 +4,22 @@
   grid-column: 2;
   height: 100%;
   overflow-y: auto;
-  margin: 2rem 6.25rem;
+  padding: 0 6.25rem;
   .subtitle {
     font-size: 1.25rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    @media (max-width: 1339px) {
+      font-size: 1rem;
+    }
   }
   .secondSubtitle {
     font-size: 1.25rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    @media (max-width: 1339px) {
+      font-size: 1rem;
+    }
   }
   .detail {
     display: flex;
@@ -23,11 +30,17 @@
       font-size: 1.25rem;
       font-weight: 700;
       color: $gray;
+      @media (max-width: 1339px) {
+        font-size: 0.85rem;
+      }
     }
     .info {
       font-size: 1.25rem;
       font-weight: 700;
       color: $black;
+      @media (max-width: 1339px) {
+        font-size: 0.85rem;
+      }
     }
   }
 }
